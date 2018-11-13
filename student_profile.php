@@ -1,6 +1,5 @@
 <?php 
     require_once('php/connect.php');
-    
     if(!isset($_SESSION['id'])){
         header('location:login.php');
     }
@@ -11,15 +10,6 @@
         $sql_program = "SELECT * FROM tbl_student_program WHERE student_id = '".$_GET['id']."' ";
         $result_program = $conn->query($sql_program);
         $row_program = $result_program->fetch_assoc();
-
-     /*
-    if (!$result->num_rows) {
-        echo "33";
-       
-    }*/
-     
-    //echo  $_GET['id'];
-
 ?>
 
 <!DOCTYPE html>
